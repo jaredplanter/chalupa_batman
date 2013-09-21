@@ -1,4 +1,9 @@
 ChalupaBatman::Application.routes.draw do
+  get "meetups/index"
+  get "meetups/new"
+  get "meetups/create"
+  get "meetups/edit"
+  get "meetups/destroy"
   get "pairs/index"
   get "pairs/new"
   get "pairs/create"
