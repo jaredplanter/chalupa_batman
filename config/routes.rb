@@ -1,5 +1,4 @@
 ChalupaBatman::Application.routes.draw do
-<<<<<<< HEAD
   # get "search/index"
   # get "search/new"
   # get "search/create"
