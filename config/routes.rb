@@ -1,25 +1,39 @@
 ChalupaBatman::Application.routes.draw do
-  get "search/index"
-  get "search/new"
-  get "search/create"
-  get "search/edit"
-  get "search/destroy"
-  get "meetups/index"
-  get "meetups/new"
-  get "meetups/create"
-  get "meetups/edit"
-  get "meetups/destroy"
-  get "pairs/index"
-  get "pairs/new"
-  get "pairs/create"
-  get "pairs/edit"
-  get "pairs/destroy"
-  get "users/index"
-  get "users/new"
-  get "users/create"
-  get "users/edit"
-  get "users/destroy"
+  # get "search/index"
+  # get "search/new"
+  # get "search/create"
+  # get "search/edit"
+  # get "search/destroy"
+  # get "meetups/index"
+  # get "meetups/new"
+  # get "meetups/create"
+  # get "meetups/edit"
+  # get "meetups/destroy"
+  # get "pairs/index"
+  # get "pairs/new"
+  # get "pairs/create"
+  # get "pairs/edit"
+  # get "pairs/destroy"
+  # get "users/index"
+  # get "users/new"
+  # get "users/create"
+  # get "users/edit"
+  # get "users/destroy"
   get "welcome/index"
+
+  resource :users
+  resource :pairs
+  resource :meetups
+  resource :search
+
+  # possibly do this later
+  # get     'users'         => 'cms#index',   as: :users
+  # get     'user/new'      => 'cms#new',     as: :new_user
+  # post    'user'          => 'cms#create',  as: :custom_page
+  # get     'user/:id/edit' => 'cms#edit',    as: :edit_user
+  # put     'user/:id'      => 'cms#update',  as: :user
+  # delete  'user/:id'      => 'cms#destroy', as: :user
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
