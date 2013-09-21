@@ -19,6 +19,7 @@ ChalupaBatman::Application.routes.draw do
   get "users/create"
   get "users/edit"
   get "users/destroy"
+  get "users/login"
   get "welcome/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
