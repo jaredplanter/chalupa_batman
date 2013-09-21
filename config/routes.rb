@@ -21,10 +21,12 @@ ChalupaBatman::Application.routes.draw do
   # get "users/destroy"
   get "welcome/index"
 
-  resource :users
-  resource :pairs
-  resource :meetups
-  resource :search
+  resources :users
+  resources :pairs
+  resources :meetups
+  resources :search
+
+  get     'login'         => 'users#login',   as: :user_login
 
   # possibly do this later
   # get     'users'         => 'cms#index',   as: :users
