@@ -1,4 +1,9 @@
 ChalupaBatman::Application.routes.draw do
+  get "search/index"
+  get "search/new"
+  get "search/create"
+  get "search/edit"
+  get "search/destroy"
   get "meetups/index"
   get "meetups/new"
   get "meetups/create"
