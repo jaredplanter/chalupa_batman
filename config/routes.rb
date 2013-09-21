@@ -1,4 +1,9 @@
 ChalupaBatman::Application.routes.draw do
+  get "pairs/index"
+  get "pairs/new"
+  get "pairs/create"
+  get "pairs/edit"
+  get "pairs/destroy"
   get "users/index"
   get "users/new"
   get "users/create"
