@@ -29,6 +29,7 @@ ChalupaBatman::Application.routes.draw do
   get    'login'           => 'users#login',  as: :user_login
   get    'user/:id'        => 'users#show',   as: :user
   get    'events'  =>  'search#events',  as: :events
+  get    'event'  =>  'search#event_details',  as: :event_detail
   get    'lookup/:id'  =>  'users#lookup',  as: :lookup
 
   # possibly do this later
