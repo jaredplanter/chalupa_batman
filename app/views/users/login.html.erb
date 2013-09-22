@@ -1,16 +1,31 @@
-<div>
+<%= form_for 'test' do |f| %>
+
+<div id="app_container" class="span12">
+
 	<h2>Sign In</h2>
 
 	<div>
-		<p>Don't have an account?</p>
-		<a href="">Join Now</a>
+		<p>Don't have an account?
+			<a href="">Join Now</a></p>
+		</div>
+
+		<img style="margin-bottom: 5px;" src="/assets/facebook_btn.png" />
+		<p>Or</p>
+
+		<div id="login_container">
+			<p>Sign in with your email address</p>
+			<div>
+				<%= f.text_field :email, :placeholder => "Email Address"%>
+			</div>
+
+			<div>
+				<%= f.text_field :password, :placeholder => "Password" %>
+			</div>
+
+			<img src="/assets/sign_in_btn.png" />
+		</div>
+
+		<img style="margin-top:20px;" src="/assets/passport_footer.png"/>
 	</div>
 
-	<p>Or</p>
-
-	<div>
-		<p>Sign in with your email address</p>
-		<input ></input>
-	</div>
-
-</div>
+	<% end %>
