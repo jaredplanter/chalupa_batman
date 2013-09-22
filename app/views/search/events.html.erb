@@ -1,0 +1,19 @@
+SEARCH BAR HERE
+<div class="row span3">
+<% @interest.each do |i| %>
+	<div class="span2">
+	<%= int.asset_name %><br /><%= i.asset_location %>
+	</div>
+	<div class="span1"><%= i.asset_start_date %></div>
+<% end %>
+
+<br />
+
+<div class="row span3">
+<% @event.each do |e| %>
+	<div class="span2">
+		<%= e.title %><br /><%= e.location %>
+	</div>
+	<div class="span1"><%= e.start_date %></div>
+<% end %>
+</div>
