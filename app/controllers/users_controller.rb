@@ -19,6 +19,9 @@ class UsersController < ApplicationController
   end
 
   def login
-    
+  end
+
+  def lookup
+    @user = Users.find params[:id]
   end
 end
