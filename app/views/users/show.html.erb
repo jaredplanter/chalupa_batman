@@ -24,7 +24,7 @@ p {font-size:13px;}
 
 	<div class="divider" style="margin-top:10px;margin-bottom:10px">
 		<span>Seeking: </span>
-		<% if @user.int_gender == 'F' %>
+		<% if @user.int_gender.downcase == 'F' %>
 		<span style="color:#FF33CC">Female</span>
 		<% else %>
 		<span style="color:#0066FF">Male</span>
