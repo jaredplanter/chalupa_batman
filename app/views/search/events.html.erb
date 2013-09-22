@@ -1,4 +1,7 @@
-SEARCH BAR HERE
+<%= form_tag('/events', method: :get) %>
+	<div><%= text_field_tag 'keyword', nil, class: 'search-query' %></div>
+	<div><%= submit_tag 'Search' %></div>
+
 <div class="row span3">
 <% @interests.each do |i| %>
 	<div class="span2">
@@ -10,14 +13,13 @@ SEARCH BAR HERE
 <br />
 
 <% if @event.present? %>
-
 	<div class="row span3">
 	<% @event.results.each do |e| %>
 		<div class="span2">
-			<%= e.title %><br />[TODO: LOCATION]
+			<%= e.title %><br />
+			<%= e.place.cityName %>, <%= e.place.stateProvinceCode %>
 		</div>
 		<div class="span1"><%= e.start_date %></div>
 	<% end %>
 	</div>
-
 <% end %>
