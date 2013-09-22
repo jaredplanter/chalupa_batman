@@ -21,7 +21,7 @@ $(document).ready(function()
 	});
 
 	$('#requestsMenuItem').click(function() {
-		window.location = '/events'
+		window.location = '/review_request/1'
 		$('.dropdown-toggle').text('Requests');
 	});
 
