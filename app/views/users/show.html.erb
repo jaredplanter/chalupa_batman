@@ -10,11 +10,11 @@ p {font-size:13px;}
 				<td style="width:60%;vertical-align:bottom;text-align:right;padding-right:10px;">
 					<span><%= @user.name %></span>
 					<br>
-					<span style="color:#0066FF"><%= @user.gender %></span><br>
-					<span>29</span>
+					<span style="color:#0066FF"><%= gender @user.gender %></span><br>
+					<span>Age: <%= @user.age %></span>
 				</td>
 				<td style="width:100%">
-					<img class="pull-right" src="/assets/profile_pic.jpg" style="width:120px;float:right;">
+					<img class="pull-right" src="/assets/<%= @user.profile_pic %>" style="width:120px;float:right;">
 				</td>
 			</tr>
 		</table>
@@ -24,7 +24,7 @@ p {font-size:13px;}
 
 	<div class="divider" style="margin-top:10px;margin-bottom:10px">
 		<span>Seeking: </span>
-		<% if @user.int_gender.downcase == 'F' %>
+		<% if @user.int_gender.downcase == 'f' %>
 		<span style="color:#FF33CC">Female</span>
 		<% else %>
 		<span style="color:#0066FF">Male</span>
