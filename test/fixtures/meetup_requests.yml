@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  to_id: 1
+  from_id: 1
+  sent_timestamp: 2013-09-21 17:54:54
+  meetup_timestamp: 2013-09-21 17:54:54
+  meetup_address: MyText
+  meetup_type_id: 1
+
+two:
+  to_id: 1
+  from_id: 1
+  sent_timestamp: 2013-09-21 17:54:54
+  meetup_timestamp: 2013-09-21 17:54:54
+  meetup_address: MyText
+  meetup_type_id: 1
