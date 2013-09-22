@@ -10,7 +10,7 @@ p {font-size:13px;}
 				<td style="width:60%;vertical-align:bottom;text-align:right;padding-right:10px;">
 					<span><%= @user.name %></span>
 					<br>
-					<span style="color:#0066FF"><%= gender @user.gender %></span><br>
+					<span><%= gender @user.gender %></span><br>
 					<span>Age: <%= @user.age %></span>
 				</td>
 				<td style="width:100%">
@@ -25,9 +25,9 @@ p {font-size:13px;}
 	<div class="divider" style="margin-top:10px;margin-bottom:10px">
 		<span>Seeking: </span>
 		<% if @user.int_gender.downcase == 'f' %>
-		<span style="color:#FF33CC">Female</span>
+		<span>Female</span>
 		<% else %>
-		<span style="color:#0066FF">Male</span>
+		<span>Male</span>
 		<% end %>
 	</div>
 

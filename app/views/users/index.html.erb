@@ -1,11 +1,30 @@
 <%= javascript_include_tag "sparks"%>
 
-<table id="sparksTable" class="table table-striped table-hover">
-
+<table>
 <tr>
+<% counter = 0 %>
+
 <% Users.all.each do |user| %>
-		<td style="width:50%"><%= image_tag user.profile_pic, id: user.id, class: 'profilePic'%></td>
+
+<% counter += 1 %>
+
+<% if counter == 2 %>
+	<tr>
+	<% counter = 0 %>
+<% end %>
+
+<% if user.id != 1 && user.exp_id != 1 %>
+		<td style="width:50%;height:50%;" id="potential_spark">
+			<span class="id" style="display:none;"><%= user.id %></span>
+			<%= image_tag user.profile_pic, id: user.id, class: 'profilePic' %>
+		</td>
+<% end %>
+
+<% if counter == 2 %>
+	</tr>
+	<% counter = 0 %>
+<% end %>
+
 <% end %>
 </tr>
-
 </table>
