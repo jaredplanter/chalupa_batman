@@ -1,25 +1,39 @@
+<%= javascript_include_tag "events"%>
+
 <%= form_tag('/events', method: :get) %>
-	<div><%= text_field_tag 'keyword', nil, class: 'search-query' %></div>
-	<div><%= submit_tag 'Search' %></div>
+<span><%= text_field_tag 'keyword', nil, class: 'search-query' %>
+</span>
+<%= submit_tag 'Search', class: 'btn btn-warning'%>
 
-<div class="row span3">
-<% @interests.each do |i| %>
-	<div class="span2">
-	<%= i.asset_name %><br /><%= i.asset_location %>
-	</div>
-	<div class="span1"><%= i.asset_start_date %></div>
+<div class="row" style="margin-top:15px;font-size:12px">
+	<% @interests.each do |i| %>
+	<span>
+		<span class="fakeLink"><%= i.asset_name %></span>
+		<span style="float:right;vertical-align:top"><%= format_start_date i.asset_start_date %> 
+			<img src="/assets/goldstar.png">
+		</span>
+	</span>
+	<br>
+	<span><%= i.asset_location %></span>
+</span>
 <% end %>
-
-<br />
+</div>
 
 <% if @event.present? %>
-	<div class="row span3">
+<div class="row" style="font-size:12px">
 	<% @event.results.each do |e| %>
-		<div class="span2">
-			<%= e.title %><br />
-			<%= e.place.cityName %>, <%= e.place.stateProvinceCode %>
-		</div>
-		<div class="span1"><%= e.start_date %></div>
-	<% end %>
+
+	<div class="row" style="margin-top:15px;font-size:12px">	
+		<span>
+			<span class="fakeLink"><%= truncate e.title, :length => 30, :omission => '...' %></span>
+			<span style="float:right;vertical-align:top"><%= format_start_date e.start_date %> 
+				<img class="starImg" src="/assets/blackstar.png">
+			</span>
+		</span>
+		<br>
+		<span><%= e.place.cityName %>, <%= e.place.stateProvinceCode %></span>
 	</div>
+	
+	<% end %>
+</div>
 <% end %>

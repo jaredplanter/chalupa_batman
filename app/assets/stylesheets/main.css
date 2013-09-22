@@ -53,3 +53,11 @@ a {
 .activityIcon {
 	width:35px;
 }
+
+.fakeLink {
+	font-family: Proxima-Nova-Semibold, Arial, sans-serif;
+font-size: 13px;
+letter-spacing: 0.02em;
+color: #2191cb;
+text-decoration: none;
+}
