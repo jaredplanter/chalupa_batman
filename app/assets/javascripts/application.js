@@ -15,7 +15,7 @@ $(document).ready(function()
 	});
 
 	$('#sparksMenuItem').click(function() {
-		window.location = '/events'
+		window.location = '/users'
 		$('.dropdown-toggle').text('Sparks');
 	});
 

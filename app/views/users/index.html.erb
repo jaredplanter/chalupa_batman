@@ -5,6 +5,5 @@
 <% @Users.all do |user| %>
 	<tr>
 		<td><%= image_tag "assets/#{user.profile_pic}", id: user.id, class: 'profilePic'%></td>
-		<!--TODO ADD AGE -->
 	</tr>
 <% end %>
