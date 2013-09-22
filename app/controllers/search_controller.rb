@@ -21,4 +21,9 @@ class SearchController < ApplicationController
     
     @interests = Interests.all
   end
+
+  def event_details
+    # @interest = Interests.find 
+    # build out dynamic ED page if we have time
+  end
 end
