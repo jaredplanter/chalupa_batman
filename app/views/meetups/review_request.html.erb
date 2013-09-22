@@ -1,8 +1,11 @@
+<%= javascript_include_tag "requests"%>
+
 <style type="text/css">
 label {
 	display:inline;
 	text-align: right;
 	width:76px;
+	margin-top:15px;
 }
 </style>
 
@@ -17,11 +20,16 @@ label {
 	<%= label_tag 'Location:' %>
 	<%= label_tag 'Fiesta Island' %>
 	<br />
-	<%= label_tag '1590 e mission bay dr, san diego', nil, class: 'need-a-class' %>
+	<%= label_tag '1590 E Mission Bay Dr, San Diego, CA', nil, class: 'need-a-class' %>
 
 	<br />
+	<div style="margin-top:20px"/>
 
 	<% meetup_types = MeetupTypes.find @request.meetup_type_id %>
 	<%= image_tag(meetup_types.name + ".png") %>
 
+	<br/>
+
+	<button type="button" class="btn btn-info" style="margin-top:15px">Accept</button>
+	<button type="button" class="btn btn-warning" style="margin-top:15px">Another Date</button>
 </div>

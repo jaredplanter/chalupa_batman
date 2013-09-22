@@ -19,5 +19,6 @@ class MeetupsController < ApplicationController
   end
 
   def review_request
+    @request = MeetupRequests.find params[:id]
   end
 end
