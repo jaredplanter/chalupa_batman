@@ -1,1 +1,35 @@
-EVENT DETAILS PAGE
+<%= javascript_include_tag "event_details"%>
+
+<style type="text/css">
+label {
+	display: inline;
+	text-align: right;
+}
+
+</style>
+
+<%= javascript_include_tag "event"%>
+
+<div  style="text-align:center">
+
+	<img src="/assets/eventDetailTop.png"/>
+
+	<div class="divider"/>
+
+	<div style="margin-top:15px">
+		<div style="float:left; width:55%;text-align:right">
+			<label for="age">Average Age: </label><span style="margin-right:17px" id="age">28</span><br/>
+			<label for="within">Within 5 years of you: </label><span style="margin-right:9px" id="within">856</span><br/>
+			<label for="females">Females: </label><span id="females" >2839</span><br/>
+			<label for="males">Males: </label><span id="males"> 3478</span>
+		</div>
+		<div style="float:right;margin-right:20px;text-align:center">
+			<img style="height:60px;" src="/assets/runner.png"/>
+			<br/>
+			<span >65% Female</span>
+		</div>
+	</div>
+
+	<button id="findSparks" class="btn btn-info" style="width:90%;margin-top:20px;">Find Sparks</button>
+
+</div>
