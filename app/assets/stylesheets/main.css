@@ -65,3 +65,10 @@ letter-spacing: 0.02em;
 color: #2191cb;
 text-decoration: none;
 }
+
+.profileCarousel {
+	height:180px;
+	display:initial !important;
+	text-align: center !important;
+	margin-bottom: 15px;
+}
