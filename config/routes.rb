@@ -24,10 +24,11 @@ ChalupaBatman::Application.routes.draw do
   resources :users, only: [:index]
   resources :pairs
   resources :meetups
-  resources :search
+  resources :search, only: [:index]
 
-  get     'login'         => 'users#login',   as: :user_login
-  get     'user/:id'      => 'users#show',   as: :user
+  get    'login'           => 'users#login',  as: :user_login
+  get    'user/:id'        => 'users#show',   as: :user
+  get    'events'  =>  'search#events',  as: :events
 
   # possibly do this later
   # get     'users'         => 'cms#index',   as: :users
