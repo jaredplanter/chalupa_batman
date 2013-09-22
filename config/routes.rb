@@ -37,7 +37,7 @@ ChalupaBatman::Application.routes.draw do
 
   # meetup routes
   get    'request_meetup/:id'  =>  'meetups#meetup_request',  as: :request_meetup
-  get    'review_meetup/:id'  =>  'meetups#review_request',  as: :review_meetup
+  get    'review_request/:id'  =>  'meetups#review_request',  as: :review_request
 
   # possibly do this later
   # get     'users'         => 'cms#index',   as: :users
