@@ -1,7 +1,5 @@
 $(document).ready(function()
-{
-	$('.item').last().remove();
-	
+{	
 	$('.dropdown-toggle').text('Sparks');
 
 	$('#meetupBtn').click( function() {

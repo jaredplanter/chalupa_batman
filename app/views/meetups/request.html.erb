@@ -1,0 +1,25 @@
+<%= javascript_include_tag "request"%>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('[data-behaviour~=datepicker]').datepicker();
+  })
+</script>
+
+<style type="text/css">
+label {
+	display:inline;
+}
+
+</style>
+
+<div style="padding:10px;">
+	<%= form_tag '/request_meetup/params[:id]', method: :get %>
+
+	<label for="date">Date</label>
+	<input type="text" data-behaviour='datepicker' >
+
+
+	<label>Location</label> <%= text_field_tag 'meetup_address' %>
+
+</div>

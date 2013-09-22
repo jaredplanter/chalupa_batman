@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
+//= require bootstrap-datepicker
 
 $(document).ready(function()
 {
@@ -15,7 +16,7 @@ $(document).ready(function()
 	});
 
 	$('#sparksMenuItem').click(function() {
-		window.location = '/users'
+		window.location = '/pairs'
 		$('.dropdown-toggle').text('Sparks');
 	});
 
