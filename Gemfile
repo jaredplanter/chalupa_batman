@@ -40,7 +40,8 @@ gem 'therubyracer'
 
 gem 'actv'
 
-gem 'httparty'
+# gem 'httparty'
+# gem 'rest-client'
 
 gem 'pry'
 
