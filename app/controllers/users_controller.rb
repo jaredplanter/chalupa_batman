@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def lookup
-    if params[:id] == "22"
+    if params[:id] == "8"
       params[:id] = "2"
     end
     @user = Users.find params[:id]
