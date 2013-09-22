@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922060255) do
+ActiveRecord::Schema.define(version: 20130922073129) do
 
   create_table "experiences", force: true do |t|
     t.string   "name"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20130922060255) do
     t.string   "asset_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "asset_location"
+    t.string   "asset_start_date"
   end
 
   create_table "meetup_requests", force: true do |t|
