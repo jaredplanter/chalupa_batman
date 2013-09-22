@@ -10,20 +10,28 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
+	<div id="navbarContainer" class="container">
 		<div class="navbar">
 			<div class="navbar-inner">
-				<a class="brand" href="#">Title</a>
-				<ul class="nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-				</ul>
+				<div class="dropdown" style="padding-top: 9px;">
+					<span id="menu" class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-size: 20px;">Profile</span><b class="caret"></b>
+					<ul id="menuItems" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li id="profileMenuItem">Profile</li>
+						<li class="dividerMenuItem"/>
+						<li id="searchMenuItem">Events</li>
+						<li class="dividerMenuItem"/>
+						<li id="sparksMenuItem">Sparks</li>
+						<li class="dividerMenuItem"/>
+						<li id="requestsMenuItem">Requests</li>
+						<li class="dividerMenuItem"/>
+						<li id="logoutMenuItem">Logout</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container" style="padding:10px">
+	<div class="container" >
 		<%= yield %>
 	</div>
 
