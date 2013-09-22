@@ -9,4 +9,8 @@ $(document).ready(function()
 			$(this).attr('src', '/assets/blackstar.png')
 		}
 	});
+
+	$('.interestLink').click (function() {
+		window.location = '/event'
+	});
 });

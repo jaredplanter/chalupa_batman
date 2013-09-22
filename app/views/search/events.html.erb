@@ -8,7 +8,7 @@
 <div class="row" style="margin-top:15px;font-size:12px">
 	<% @interests.each do |i| %>
 	<span>
-		<span class="fakeLink"><%= truncate i.asset_name, :length => 30, :omission => '...' %></span>
+		<span class="interestLink fakeLink"><%= truncate i.asset_name, :length => 30, :omission => '...' %></span>
 		<span style="float:right;vertical-align:top"><%= format_start_date i.asset_start_date %> 
 			<img src="/assets/goldstar.png">
 		</span>
