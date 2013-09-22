@@ -8,6 +8,12 @@ Bundler.require(:default, Rails.env)
 
 module ChalupaBatman
   class Application < Rails::Application
+
+    ACTV.configure do |config|
+      config.endpoint = "http://api.amp.active.com"
+      config.api_key = "pdj6s8ryrg4g7hey3c96k4jf"
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
