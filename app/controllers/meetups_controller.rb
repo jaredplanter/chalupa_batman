@@ -13,4 +13,10 @@ class MeetupsController < ApplicationController
 
   def destroy
   end
+
+  def meetup_request
+  end
+
+  def review_request
+  end
 end
