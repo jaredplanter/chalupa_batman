@@ -1,0 +1,55 @@
+<div style="padding:10px">
+	<div style="text-align:center; margin-top:-20px">
+
+		<div>
+			<span style="margin-right:7px"><%= @user.name %></span>
+			<span style="color:#FF33CC; font-weight:bold"><%= @user.age %></span>
+		</div>
+
+		<%= image_tag @user.profile_pic, class: 'profilePicBig' %>
+
+		<div style="margin-top:10px">
+			<span style="vertical-align:bottom">
+				<% if @user.swim.downcase == 'y' %>
+				<img class="activityIcon" src="/assets/swim.png"/>
+				<% end %>
+				<% if @user.bike.downcase == 'y' %>
+				<img class="activityIcon" src="/assets/bike.png"/>
+				<% end %>
+				<% if @user.run.downcase == 'y' %>
+				<img class="activityIcon" src="/assets/run.png"/>
+				<% end %>
+			</span>
+		</div>
+
+		<div style="margin-top:10px">
+			<span style="vertical-align:bottom">
+				<% if @user.expertise == 1 %>
+				<img class="activityIcon" src="/assets/1star.png"/>
+				<% end %>
+				<% if @user.expertise == 2 %>
+				<img class="activityIcon" src="/assets/2stars.png"/>
+				<% end %>
+				<% if @user.expertise == 3 %>
+				<img class="activityIcon" src="/assets/3stars.png"/>
+				<% end %>
+				<% if @user.expertise == 4%>
+				<img class="activityIcon" src="/assets/4stars.png"/>
+				<% end %>
+				<% if @user.expertise == 5 %>
+				<img class="activityIcon" src="/assets/5stars.png"/>
+				<% end %>
+			</span>
+		</div>
+
+		<span id="id" style="display:none">
+			<%= @user.id %>
+		</span>
+		
+		<div>
+			<span id="trainAlone">Train Alone<i class="icon-remove-sign"></i></span>
+			<span id="sparkMyTraining">Spark My Training<i class="icon-heart-alt"></i></span>
+		</div>
+
+	</div>
+</div>

@@ -45,3 +45,11 @@ a {
 .paddingDiv {padding-top:15px;}
 
 .dividerMenuItem {border-top: solid 1px lightgrey;}
+
+.profilePicBig {
+	width:200px;
+}
+
+.activityIcon {
+	width:35px;
+}
