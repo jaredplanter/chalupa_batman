@@ -1,1 +1,43 @@
+<%= javascript_include_tag "pairs"%>
 
+<div id="myCarousel" class="carousel slide">
+  
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <% Users.all.each do |user| %>
+      <% if user.id != 1 %>
+          <% if user.id == 2 %>
+            <div class="item active" style="text-align:center">
+                <%= image_tag user.profile_pic, class: 'profileCarousel' %>
+                <br/>
+                <span style="margin-right:7px"><%= user.name %></span> 
+                <span style="color:#FF33CC; font-weight:bold"><%= user.age %></span>
+                <br/>
+                <button id="meetupBtn" type="button" class="btn btn-info"  style="margin-top:20px">
+                  Meetup Request<span style="display:none" id="id"><%= user.id %></span>
+                </button>
+            </div>
+          <% else %>
+            <div class="item" style="text-align:center">
+                <%= image_tag user.profile_pic,class: 'profileCarousel' %>
+                <br/>
+                <span style="margin-right:7px"><%= user.name %></span> 
+                <span style="color:#FF33CC; font-weight:bold"><%= user.age %></span>
+                <br/>
+                <button id="meetupBtn" type="button" class="btn btn-info"  style="margin-top:15px">
+                  Meetup Request<span style="display:none" id="id"><%= user.id %></span>
+                </button>
+            </div>
+          <% end %>
+      
+
+      <% else %>
+          <div id="hideThisDiv" style="display:none"/>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+</div>
