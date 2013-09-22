@@ -19,5 +19,6 @@ class SearchController < ApplicationController
       @event = ACTV.search params[:keyword], { near: "San Diego, CA", start_date: "2013-09-22..", category: "event", exclude_children: true }
     end
     
-    @interests = Interest.all
+    @interests = Interests.all
+  end
 end
