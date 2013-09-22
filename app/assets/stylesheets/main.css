@@ -72,3 +72,7 @@ text-decoration: none;
 	text-align: center !important;
 	margin-bottom: 15px;
 }
+
+.inputFields {
+width:150px;
+}

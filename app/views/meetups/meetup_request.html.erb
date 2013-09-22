@@ -1,0 +1,55 @@
+<%= javascript_include_tag "request"%>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('[data-behaviour~=datepicker]').datepicker();
+})
+</script>
+
+<style type="text/css">
+label {
+	display:inline;
+	text-align: right;
+	width:76px;
+}
+
+</style>
+
+<div style="padding:10px;">
+	<div style="margin-bottom:15px">
+		<span>To: <%= @user.name %></span>
+	</div>
+
+	<%= form_tag request_meetup_path, method: :get %>
+
+	<label for="date" style="margin-right:37px">Date: </label>
+	<input class="inputFields" style="width:150px" type="text" data-behaviour='datepicker' />
+	<br/>
+
+	<label style="margin-right:12px">Location: </label> <%= text_field_tag 'meetup_address', nil, class: 'inputFields' %>
+	<br/>
+
+	<div>
+		<img src="/assets/runbikeswim.png" width="87px" style="margin-top:15px;margin-left:76px"/>
+		<br>
+		<span style="margin-left:76px">
+			<input type="checkbox" style="margin-right:17px;"/>
+			<input type="checkbox" style="margin-right:17px;"/>
+			<input type="checkbox" >
+		</span>
+		<br/>
+	</div>
+	
+	<div style="margin-top:15px">
+		<label style="margin-right:12px">Distance:</label>
+		<%= text_field_tag nil, nil, class: 'inputFields' %>
+	</div>
+
+	<div style="margin-top:15px;margin-bottom:15px">
+		<label style="margin-right:6px">Contact #:</label>
+		<%= text_field_tag nil, nil, class: 'inputFields' %>
+	</div>
+
+	<%= submit_tag 'Send Meetup Request', class: 'btn btn-warning'%>
+
+</div>
