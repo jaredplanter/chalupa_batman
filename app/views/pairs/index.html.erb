@@ -1,2 +1,8 @@
-<h1>Pairs#index</h1>
-<p>Find me in app/views/pairs/index.html.erb</p>
+<table id="sparksTable" class="table table-striped table-hover">
+
+<% @Users.all do |user| %>
+	<tr>
+		<td><%= image_tag "assets/#{user.profile_pic}", id: user.id, class: 'profilePic'%></td>
+		<!--TODO ADD AGE -->
+	</tr>
+<% end %>

@@ -14,11 +14,6 @@ $(document).ready(function()
 		$('.dropdown-toggle').text('Profile');
 	});
 
-	$('#findSparkMenuItem').click(function() {
-		window.location = '/events'
-		$('.dropdown-toggle').text('Create Sparks');
-	});
-
 	$('#sparksMenuItem').click(function() {
 		window.location = '/events'
 		$('.dropdown-toggle').text('Sparks');
