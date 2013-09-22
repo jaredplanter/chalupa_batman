@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922002919) do
+ActiveRecord::Schema.define(version: 20130922003027) do
 
   create_table "experiences", force: true do |t|
     t.string   "name"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 20130922002919) do
   create_table "pair_requests", force: true do |t|
     t.integer  "to_id"
     t.integer  "from_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pairs", force: true do |t|
+    t.integer  "user_one_id"
+    t.integer  "user_two_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
