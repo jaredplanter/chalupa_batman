@@ -1,3 +1,5 @@
+<%= javascript_include_tag "login"%>
+
 <%= form_for 'test' do |f| %>
 
 <div id="app_container" class="span12">
@@ -9,7 +11,7 @@
 			<a href="">Join Now</a></p>
 		</div>
 
-		<a href="/user/1"><img style="margin-bottom: 5px;" src="/assets/facebook_btn.png" /></a>
+		<img id="facebookLogin" style="margin-bottom: 5px;" src="/assets/facebook_btn.png" />
 		<p>Or</p>
 
 		<div id="login_container">

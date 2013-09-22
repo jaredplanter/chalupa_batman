@@ -1,3 +1,49 @@
-#ready for UI
-# @user object available
-Hello <%= @user.name %>
+<style type="text/css">
+p {font-size:13px;}	
+
+</style>
+
+<div class="row" style="vertical-align:bottom">
+	<div>
+		<table class="span12">
+			<tr>
+				<td style="width:60%;vertical-align:bottom;text-align:right;padding-right:10px;">
+					<span><%= @user.name %></span>
+					<br>
+					<span style="color:#0066FF"><%= @user.gender %></span><br>
+					<span>27</span>
+				</td>
+				<td style="width:100%">
+					<img class="pull-right" src="/assets/profile_pic.jpg" style="width:120px;float:right;">
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="paddingDiv"/>
+
+	<div class="divider" style="margin-top:10px;margin-bottom:10px">
+		<span>Seeking: </span>
+		<% if @user.int_gender == 'F' %>
+		<span style="color:#FF33CC">Female</span>
+		<% else %>
+		<span style="color:#0066FF">Male</span>
+		<% end %>
+	</div>
+
+	<div class="paddingDiv"/>
+
+	<img src="/assets/runbikeswim.png" width="87px"/>
+	<br>
+	<span>
+		<input type="checkbox" style="margin-right:17px;">
+		<input type="checkbox" style="margin-right:17px;">
+		<input type="checkbox">
+	</span>
+
+	<br>
+
+	<div class="paddingDiv"/>
+
+	<span>Expertise</span>
+	<img src="/assets/4stars.png"/>
