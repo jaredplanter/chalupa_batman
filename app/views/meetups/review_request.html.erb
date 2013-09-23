@@ -11,6 +11,11 @@ label {
 
 <div style="padding:10px;">
 	<%= form_tag review_request_path, method: :get %>
+	
+	<%= label_tag 'Name:' %>
+	Brenda Martin
+
+	<br />
 
 	<%= label_tag 'Date:' %>
 	<%= label_tag 'Oct 14, 2013' %>
@@ -18,9 +23,9 @@ label {
 	<br />
 
 	<%= label_tag 'Location:' %>
-	<%= label_tag 'Fiesta Island' %>
+	Fiesta Island
 	<br />
-	<%= label_tag '1590 E Mission Bay Dr, San Diego, CA', nil, class: 'need-a-class' %>
+	1590 E Mission Bay Dr, San Diego, CA
 
 	<br />
 	<div style="margin-top:20px"/>
